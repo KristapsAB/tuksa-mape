@@ -1,13 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Tuksa Mape</title>
+    <title>Data Display</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <p1>Fat Fat American kebab</p1>
-    <div class="main"></div>
-</body>
-</html>
+    <main>
+        <h2>Select Data to Display</h2>
+        <div class="dropdown-container">
+            <form id="data-form" method="post">
+                <select id="select-data" name="data">
+                    <option value="bookings">Bookings (ires_sakums < '2023-09-09')</option>
+                    <option value="bookings_future">Bookings (ires_beigas > '2023-09-09')</option>
+                    <option value="bookings_today">Bookings (Today)</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="workers">Workers</option>
+                    <option value="rooms">Rooms (pieejamas_istabas > 5)</option>
+                    <option value="payment">Payments</option>
+                    <option value="user_data">User Data</option>
+                    <option value="rooms_hotels">Rooms and Hotels</option>
+                    <option value="workers_birthdays">Workers with Birthdays</option>
+                    <option value="booking_rooms_users_payments">Booking Details</option>
+                    <option value="bookings_between_dates">Bookings (ires_sakums BETWEEN '2023-09-09' AND '2023-10-09')</option>
+                    <option value="rooms_available">Rooms (pieejamas_istabas > 2)</option>
+                    <option value="hotels_within_price_range">Hotels within Price Range</option>
+                    <option value="payments_above_100">Payments above $100.00</option>
+                    <option value="hotel_tips_viesnica_nr1">Hotel 'Viesnīca NR1' Room Tips</option>
+                </select>
+                <input type="submit" value="Display">
+            </form>
+        </div>
+        <div id="data-display"></div>
+        </main>
+        
+     <div class="room-container">
+    <div class="room-box">
+        <img src="https://i0.wp.com/pediaa.com/wp-content/uploads/2017/01/Difference-Between-2-Star-and-3-Star-Hotels-1.jpg?resize=554%2C369" alt="Room 1">
+        <h3>Room 1</h3>
+        <p>Price: $150/night</p>
+        <button class="show-more-button">Show More</button>
+        <div class="room-description">
+            <p>Very cool room.Wouldn't reccomend it to drug addicts</p>
+        </div>
+    </div>
+
+            
+            <div class="room-box">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/c6/29/1a/camera-twin-deluxe.jpg?w=1200&h=-1&s=1" alt="Room 2">
+                <h3>Room 2</h3>
+                <p>Price: $200/night</p>
+                <button class="show-more-button">Show More</button>
+                <div class="room-description">
+                    <p>Good room for drug addicts like Regnars Klavins</p>
+                </div>
+            </div>
+            
+            <div class="room-box">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/58/f1/1e/triple-room.jpg?w=1200&h=-1&s=1" alt="Room 3">
+                <h3>Room 3</h3>
+                <p>Price: $250/night</p>
+                <button class="show-more-button">Show More</button>
+                <div class="room-description">
+                    <p>Good room for alcoholic like Regnars Klavins extra</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
